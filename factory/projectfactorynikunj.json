@@ -1,0 +1,15 @@
+{
+	"name": "projectfactorynikunj",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6729f7ea-fc62-44bd-8fd5-8d365d9befdd",
+		"tenantId": "3ece4da0-d801-4664-9b25-6f399caea7f1"
+	}
+}
