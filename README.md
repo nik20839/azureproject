@@ -36,6 +36,16 @@ The project follows a Medallion Architecture to progressively ingest, transform,
 - Multiple tables are processed dynamically using a parameterized ForEach pipeline.
 - Incremental data is stored as Parquet files in the Bronze container of ADLS Gen2.
 
+### Metadata-Driven Incremental Ingestion
+
+The ADF pipeline uses a parameterized ForEach loop to process multiple source tables dynamically. Each iteration retrieves the previous watermark, extracts incremental records from Azure SQL, and conditionally processes newly available data.
+
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/f6235132-e7b0-42ba-8e1a-0b40e58ad97d" />
+
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/de7e55a2-d165-407f-8c17-0162f5b80128" />
+
+
+
 ### Silver Layer — Transformation
 - Databricks Auto Loader incrementally detects and processes new Bronze files.
 - PySpark transformations clean and standardize the incoming data.
